@@ -6,7 +6,7 @@ import {
 } from '@casl/ability'
 import { z } from 'zod'
 
-import type { User } from './models/User'
+import type { User } from './models/user'
 import { permissions } from './permissions'
 import {
   billingSubject,
@@ -16,6 +16,10 @@ import {
   projectSubject,
   userSubject,
 } from './subjects'
+
+export * from './models/organization'
+export * from './models/project'
+export * from './models/user'
 
 const appAbilitiesSchema = z.union([
   billingSubject,
@@ -40,6 +44,10 @@ export function defineAbilityFor(user: User) {
 
   permissions[user.role](user, builder)
 
-  const ability = builder.build()
+  const ability = builder.build({
+    detectSubjectType(subject) {
+      return subject.__typename
+    },
+  })
   return ability
 }
