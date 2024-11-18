@@ -50,5 +50,6 @@ export function defineAbilityFor(user: User) {
       return subject.__typename
     },
   })
+
   return ability
 }

@@ -1,4 +1,4 @@
-export interface GetProfileResponseResponse200 {
+export interface GetProfileResponse200 {
   user: {
     name: string | null
     id: string
