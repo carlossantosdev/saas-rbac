@@ -20,7 +20,7 @@ export async function ability() {
   return ability
 }
 
-export async function getCurrentOrg() {
+export async function getCurrentOrg(): Promise<string | null> {
   const cookiesStore = await cookies()
   return cookiesStore.get('org')?.value ?? null
 }
