@@ -9,8 +9,6 @@ export async function createProjectRequest({
   name,
   description,
 }: CreateProjectBody): Promise<CreateProjectResponse200> {
-  console.log('suahushaushauhsauhsauh')
-  console.log(org)
   await api.post(`organizations/${org}/projects`, {
     json: {
       name,

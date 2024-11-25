@@ -70,19 +70,24 @@ export async function getOrganizationBilling(app: FastifyInstance) {
           }),
         ])
 
+        const seatUnitValue = 10
+        const projectUnitValue = 20
+
         return reply.status(200).send({
           billing: {
             seats: {
               amount: amountOfMembers,
-              unit: 10,
-              price: amountOfMembers * 10,
+              unit: seatUnitValue,
+              price: amountOfMembers * seatUnitValue,
             },
             projects: {
               amount: amountOfProjects,
-              unit: 20,
-              price: amountOfProjects * 10,
+              unit: projectUnitValue,
+              price: amountOfProjects * projectUnitValue,
             },
-            total: amountOfMembers * 10 + amountOfProjects * 20,
+            total:
+              amountOfMembers * seatUnitValue +
+              amountOfProjects * projectUnitValue,
           },
         })
       },
