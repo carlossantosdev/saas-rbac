@@ -8,7 +8,9 @@
     "db:studio": "pnpm env:load prisma studio",
     "db:reset": "pnpm env:load prisma migrate reset",
     "db:seed": "pnpm env:load prisma db seed",
-    "env:load": "dotenv -e ../../.env --"
+    "env:load": "dotenv -e ../../.env --",
+    "build": "tsup",
+    "start": "node dist/http/server.js "
   },
   "dependencies": {
     "@fastify/cors": "^10.0.1",
@@ -33,6 +35,7 @@
     "@types/node": "^20.14.10",
     "dotenv-cli": "^7.4.2",
     "prisma": "^5.20.0",
+    "tsup": "^8.3.5",
     "tsx": "^4.16.2"
   },
   "prisma": {
