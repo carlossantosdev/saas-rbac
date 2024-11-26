@@ -71,6 +71,7 @@ app.register(fastifySwagger, {
 
 app.register(fastifySwaggerUI, {
   routePrefix: '/docs',
+  logo: { type: '', content: '' },
 })
 
 app.register(fastifySwaggerJwt, {
