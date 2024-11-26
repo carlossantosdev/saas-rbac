@@ -1,5 +1,3 @@
-import { redirect } from 'next/navigation'
-
 import { Header } from '@/components/header'
 import { Tabs } from '@/components/tabs'
 
