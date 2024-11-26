@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "pnpm env:load next dev --turbo",
+    "dev": "pnpm env:load next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -25,10 +25,10 @@
     "cookies-next": "^4.3.0",
     "ky": "^1.7.2",
     "lucide-react": "^0.453.0",
-    "next": "15.0.0-rc.1",
+    "next": "15.0.3",
     "next-themes": "^0.4.3",
-    "react": "19.0.0-rc-cd22717c-20241013",
-    "react-dom": "19.0.0-rc-cd22717c-20241013",
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.23.8"
@@ -38,8 +38,8 @@
     "@saas/prettier-config": "workspace:*",
     "@saas/typescript-config": "workspace:*",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
     "dotenv-cli": "^7.4.2",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
@@ -50,5 +50,11 @@
       "@saas/eslint-config/next"
     ]
   },
-  "prettier": "@saas/prettier-config"
+  "prettier": "@saas/prettier-config",
+  "pnpm": {
+    "overrides": {
+      "@types/react": "npm:types-react@19.0.0-rc.1",
+      "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
+    }
+  }
 }
