@@ -34,7 +34,7 @@
     "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20.14.10",
     "dotenv-cli": "^7.4.2",
-    "prisma": "^5.20.0",
+    "prisma": "^5.22.0",
     "tsup": "^8.3.5",
     "tsx": "^4.16.2"
   },
