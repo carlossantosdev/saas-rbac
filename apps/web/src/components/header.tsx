@@ -1,9 +1,9 @@
 import { Slash } from 'lucide-react'
 import Image from 'next/image'
 
-import logoIcon from '@/assets/icons/logo-icon.svg'
 import { ability } from '@/auth/auth'
 
+import logoIcon from '../assets/icons/logo-icon.svg'
 import { OrganizationSwitcher } from './organization-switcher'
 import { ProfileButton } from './profile-button'
 import { ProjectSwitcher } from './project-switcher'
