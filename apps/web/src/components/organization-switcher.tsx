@@ -3,7 +3,6 @@ import Link from 'next/link'
 
 import { getCurrentOrg } from '@/auth/auth'
 import { getOrganizations } from '@/http/requests/get-organizations'
-import { getPendingInvites } from '@/http/requests/get-pending-invites'
 
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
 import {

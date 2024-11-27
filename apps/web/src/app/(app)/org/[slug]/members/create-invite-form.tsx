@@ -1,7 +1,6 @@
 'use client'
 
 import { AlertTriangle, CheckCircle, Loader2, UserPlus } from 'lucide-react'
-import { useParams } from 'next/navigation'
 
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
@@ -14,7 +13,6 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { useCustomFormState } from '@/hooks/use-custom-form-state'
-import { queryClient } from '@/lib/react-query'
 
 import { createInviteAction } from './actions'
 
