@@ -37,8 +37,7 @@ export async function requestPasswordRecover(app: FastifyInstance) {
         },
       })
 
-      // Send e-mail
-      console.log('Recover password token: ', code)
+      // TODO: Send e-mail
       return reply.status(201).send()
     },
   )
