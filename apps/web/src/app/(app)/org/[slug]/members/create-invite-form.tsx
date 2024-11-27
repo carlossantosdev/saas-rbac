@@ -70,7 +70,7 @@ export function CreateInviteForm() {
         </div>
 
         <div className="space-y-1">
-          <Select name="role" value="MEMBER">
+          <Select name="role" defaultValue="MEMBER">
             <SelectTrigger className="w-48">
               <SelectValue />
             </SelectTrigger>

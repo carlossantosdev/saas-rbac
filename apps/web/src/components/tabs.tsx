@@ -38,7 +38,7 @@ export async function Tabs() {
           </Button>
         )}
 
-        {canUpdateOrganization && canGetBilling && (
+        {(canUpdateOrganization || canGetBilling) && (
           <Button
             asChild
             variant="ghost"

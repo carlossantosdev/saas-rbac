@@ -5,6 +5,7 @@ import { ability } from '@/auth/auth'
 
 import logoIcon from '../assets/icons/logo-icon.svg'
 import { OrganizationSwitcher } from './organization-switcher'
+import { PendingInvitesPopover } from './pending-invites/pending-invites-popover'
 import { ProfileButton } from './profile-button'
 import { ProjectSwitcher } from './project-switcher'
 import { ThemeSwitcher } from './theme/theme-switcher'
@@ -30,6 +31,7 @@ export async function Header() {
       </div>
 
       <div className="flex items-center gap-4">
+        <PendingInvitesPopover />
         <ThemeSwitcher />
         <Separator orientation="vertical" className="h-5" />
         <ProfileButton />
